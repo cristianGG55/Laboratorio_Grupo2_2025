@@ -1,0 +1,85 @@
+# Project: tpfinalTMPL
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o lib/orm/orm.o lib/utils/utils.o src/localidad/localidad.o config/config.o lib/orm/query.o view/view.o src/banco/banco.o src/bulto/bulto.o src/categoria/categoria.o src/cliente/cliente.o src/compra/compra.o src/det_factura/det_factura.o src/factura/factura.o src/marca/marca.o src/medio_pago/medio_pago.o src/producto/producto.o src/sucursal/sucursal.o src/track_viaje/track_viaje.o src/sucursal_dest/sucursal_dest.o
+LINKOBJ  = main.o lib/orm/orm.o lib/utils/utils.o src/localidad/localidad.o config/config.o lib/orm/query.o view/view.o src/banco/banco.o src/bulto/bulto.o src/categoria/categoria.o src/cliente/cliente.o src/compra/compra.o src/det_factura/det_factura.o src/factura/factura.o src/marca/marca.o src/medio_pago/medio_pago.o src/producto/producto.o src/sucursal/sucursal.o src/track_viaje/track_viaje.o src/sucursal_dest/sucursal_dest.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib32" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc "../../../../../../../Program Files (x86)/PostgreSQL/9.2/lib/libpq.lib" -m32 -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/PostgreSQL/9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"C:/Program Files (x86)/PostgreSQL/9.2/include"
+BIN      = tpfinalTMPL.exe
+CXXFLAGS = $(CXXINCS) -m32 -g3
+CFLAGS   = $(INCS) -m32 -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+lib/orm/orm.o: lib/orm/orm.c
+	$(CC) -c lib/orm/orm.c -o lib/orm/orm.o $(CFLAGS)
+
+lib/utils/utils.o: lib/utils/utils.c
+	$(CC) -c lib/utils/utils.c -o lib/utils/utils.o $(CFLAGS)
+
+src/localidad/localidad.o: src/localidad/localidad.c
+	$(CC) -c src/localidad/localidad.c -o src/localidad/localidad.o $(CFLAGS)
+
+config/config.o: config/config.c
+	$(CC) -c config/config.c -o config/config.o $(CFLAGS)
+
+lib/orm/query.o: lib/orm/query.c
+	$(CC) -c lib/orm/query.c -o lib/orm/query.o $(CFLAGS)
+
+view/view.o: view/view.c
+	$(CC) -c view/view.c -o view/view.o $(CFLAGS)
+
+src/banco/banco.o: src/banco/banco.c
+	$(CC) -c src/banco/banco.c -o src/banco/banco.o $(CFLAGS)
+
+src/bulto/bulto.o: src/bulto/bulto.c
+	$(CC) -c src/bulto/bulto.c -o src/bulto/bulto.o $(CFLAGS)
+
+src/categoria/categoria.o: src/categoria/categoria.c
+	$(CC) -c src/categoria/categoria.c -o src/categoria/categoria.o $(CFLAGS)
+
+src/cliente/cliente.o: src/cliente/cliente.c
+	$(CC) -c src/cliente/cliente.c -o src/cliente/cliente.o $(CFLAGS)
+
+src/compra/compra.o: src/compra/compra.c
+	$(CC) -c src/compra/compra.c -o src/compra/compra.o $(CFLAGS)
+
+src/det_factura/det_factura.o: src/det_factura/det_factura.c
+	$(CC) -c src/det_factura/det_factura.c -o src/det_factura/det_factura.o $(CFLAGS)
+
+src/factura/factura.o: src/factura/factura.c
+	$(CC) -c src/factura/factura.c -o src/factura/factura.o $(CFLAGS)
+
+src/marca/marca.o: src/marca/marca.c
+	$(CC) -c src/marca/marca.c -o src/marca/marca.o $(CFLAGS)
+
+src/medio_pago/medio_pago.o: src/medio_pago/medio_pago.c
+	$(CC) -c src/medio_pago/medio_pago.c -o src/medio_pago/medio_pago.o $(CFLAGS)
+
+src/producto/producto.o: src/producto/producto.c
+	$(CC) -c src/producto/producto.c -o src/producto/producto.o $(CFLAGS)
+
+src/sucursal/sucursal.o: src/sucursal/sucursal.c
+	$(CC) -c src/sucursal/sucursal.c -o src/sucursal/sucursal.o $(CFLAGS)
+
+src/track_viaje/track_viaje.o: src/track_viaje/track_viaje.c
+	$(CC) -c src/track_viaje/track_viaje.c -o src/track_viaje/track_viaje.o $(CFLAGS)
+
+src/sucursal_dest/sucursal_dest.o: src/sucursal_dest/sucursal_dest.c
+	$(CC) -c src/sucursal_dest/sucursal_dest.c -o src/sucursal_dest/sucursal_dest.o $(CFLAGS)
